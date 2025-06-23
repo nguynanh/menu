@@ -2,15 +2,15 @@ fx_version 'cerulean'
 lua54 'yes'
 game 'gta5'
 
-author 'Ruptz'
-description 'Vehicle Spawner'
-version '1.0.2'
+author 'nguyen'
+description 'Item Spawner '
+version '2.0.0'
 
 ui_page 'web/index.html'
 
 shared_scripts {
-	'config.lua',
 	'@ox_lib/init.lua',
+    'config.lua'
 }
 
 client_scripts {
@@ -22,6 +22,8 @@ server_scripts {
 }
 
 files {
-	'web/*',
-	'web/**/*.png'
+	'web/*'
 }
+
+-- Đảm bảo script của bạn được load sau qb-core
+ensure 'qb-core'
